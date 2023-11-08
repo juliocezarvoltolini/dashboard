@@ -1,0 +1,63 @@
+/* src/ExpandableSidebar.css */
+* {
+  background-color: #333;
+}
+
+.expandable-sidebar {
+  width: 40px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  transition: width 0.3s;
+  overflow-x: hidden;
+}
+
+.expandable-sidebar.expanded {
+  width: 200px;
+}
+
+.toggle-button {
+  font-size: 20px;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 50px;
+}
+
+li {
+  padding: 10px;
+  color: #fff;
+  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+li:hover {
+  background-color: #555;
+}
+
+.icon {
+  width: 20px; /* Largura fixa para o ícone */
+  display: flex;
+  align-items: center;
+}
+
+span {
+  display: none;
+}
+
+.expanded li span {
+  display: block;
+}
